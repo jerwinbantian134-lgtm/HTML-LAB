@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      margin: 0;
+      padding: 30px 16px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 24px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px #00000018;
+    }
+
+    h1 {
+      text-align: center;
+      color: #243b53;
+    }
+
+    .field {
+      margin-bottom: 16px;
+    }
+
+    label, legend {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input:not([type="radio"]):not([type="checkbox"]),
+    select, textarea {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #b8c4d1;
+      border-radius: 5px;
+    }
+
+    fieldset {
+      border: 1px solid #b8c4d1;
+      border-radius: 5px;
+      margin: 0 0 16px;
+      padding: 12px;
+    }
+
+    fieldset label {
+      display: inline-block;
+      margin: 5px 14px 5px 0;
+      font-weight: normal;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    button {
+      padding: 10px 18px;
+      border: 0;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button[type="submit"] {
+      background: #2463a6;
+      color: white;
+    }
+
+    button[type="reset"] {
+      background: #e5eaf0;
+    }
+  </style>
+</head>
+<body>
+  <form action="#" method="post">
+    <h1>Student Registration</h1>
+
+    <div class="field">
+      <label for="full-name">Full Name</label>
+      <input type="text" id="full-name" name="fullName"
+             placeholder="Enter your full name"
+             minlength="2" maxlength="60" required>
+    </div>
+
+    <div class="field">
+      <label for="student-id">Student ID</label>
+      <input type="text" id="student-id" name="studentId"
+             placeholder="e.g., STU-12345"
+             minlength="3" maxlength="20" required>
+    </div>
+
+    <div class="field">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email"
+             placeholder="name@example.com" required>
+    </div>
+
+    <div class="field">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password"
+             placeholder="At least 8 characters"
+             minlength="8" maxlength="64" required>
+    </div>
+
+    <div class="field">
+      <label for="birthday">Birthday</label>
+      <input type="date" id="birthday" name="birthday" required>
+    </div>
+
+    <fieldset>
+      <legend>Gender</legend>
+      <label><input type="radio" name="gender" value="female" required> Female</label>
+      <label><input type="radio" name="gender" value="male"> Male</label>
+      <label><input type="radio" name="gender" value="other"> Other</label>
+      <label><input type="radio" name="gender" value="prefer-not-to-say"> Prefer not to say</label>
+    </fieldset>
+
+    <div class="field">
+      <label for="program">Program</label>
+      <select id="program" name="program" required>
+        <option value="">Select a program</option>
+        <option value="web-development">Web Development</option>
+        <option value="computer-science">Computer Science</option>
+        <option value="information-technology">Information Technology</option>
+        <option value="database-management">Database Management</option>
+      </select>
+    </div>
+
+    <fieldset>
+      <legend>Hobbies</legend>
+      <label><input type="checkbox" name="hobbies" value="reading"> Reading</label>
+      <label><input type="checkbox" name="hobbies" value="sports"> Sports</label>
+      <label><input type="checkbox" name="hobbies" value="music"> Music</label>
+      <label><input type="checkbox" name="hobbies" value="gaming"> Gaming</label>
+    </fieldset>
+
+    <div class="field">
+      <label for="address">Address</label>
+      <textarea id="address" name="address" rows="3"
+                placeholder="Enter your address"
+                maxlength="200" required></textarea>
+    </div>
+
+    <div class="field">
+      <label for="comments">Comments</label>
+      <textarea id="comments" name="comments" rows="4"
+                placeholder="Additional information (optional)"
+                maxlength="500"></textarea>
+    </div>
+
+    <div class="buttons">
+      <button type="submit">Submit Registration</button>
+      <button type="reset">Reset Form</button>
+    </div>
+  </form>
+</body>
+</html>
